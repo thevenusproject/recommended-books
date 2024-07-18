@@ -1,0 +1,220 @@
+:root {
+    --woocommerce: #7F54B3;
+    --wc-green: #7ad03a;
+    --wc-red: #a00;
+    --wc-orange: #ffba00;
+    --wc-blue: #2ea2cc;
+    --wc-primary: #1f3444;
+    --wc-primary-text: white;
+    --wc-secondary: #e9e6ed;
+    --wc-secondary-text: #515151;
+    --wc-highlight: #b3af54;
+    --wc-highligh-text: white;
+    --wc-content-bg: #fff;
+    --wc-subtext: #767676;
+    --wp--preset--font-size--normal: 16px;
+    --wp--preset--font-size--huge: 42px;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font-size: var(--wp--preset--font-size--normal);
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    color: var(--wc-secondary-text);
+    background: linear-gradient(to bottom, #92adc8, #1d3142);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#primary.content-area {
+    padding: 20px;
+}
+
+.recommendations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: var(--wc-content-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    color: var(--wc-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--wc-primary);
+    padding-bottom: 10px;
+}
+
+.recommendation-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: var(--wc-primary);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--wc-highlight);
+    padding-left: 10px;
+}
+
+.section-content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--wc-secondary-text);
+}
+
+.link {
+    color: var(--wc-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--wc-highlight);
+    text-decoration: underline;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.book-entry {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--wc-content-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.author-info {
+    margin-bottom: 1em;
+}
+
+.author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    margin-top: 0.5em;
+    font-size: 1.8rem;
+    color: var(--wc-primary);
+}
+
+.book-info {
+    width: 100%;
+}
+
+.book-title {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    font-size: 2rem;
+    color: var(--wc-secondary-text);
+    line-height: 1.3;
+}
+
+.publication-year {
+    font-style: italic;
+    color: var(--wc-subtext);
+}
+
+@media (min-width: 768px) {
+    #primary.content-area {
+        padding: 40px;
+    }
+
+    .book-entry {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .author-info {
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #primary.content-area {
+        padding: 10px;
+    }
+
+    .recommendations-container {
+        padding: 20px;
+    }
+
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-content {
+        font-size: 1.4rem;
+    }
+
+    .author-section {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .books-info {
+        width: 100%;
+    }
+
+    .books-info .book-info {
+        margin-bottom: 2.5em;
+        padding-bottom: 2.5em;
+        border-bottom: 1px solid var(--wc-secondary);
+    }
+
+    .books-info .book-info:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .author-section .author-info {
+        flex-shrink: 0;
+    }
+
+    .books-info {
+        flex-grow: 1;
+    }
+}
